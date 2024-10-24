@@ -85,7 +85,9 @@
                     $("<td width='20%'>" + info[i].artist + "</td>").appendTo(str);
 
                     // Chart
-                    $("<td width='5%'>" + info[i].url_diff + "</td>").appendTo(str);
+                    $("<td width='5%'>" + "<a href='url_diff" + info[
+                            i]
+                        .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
                     
                     // Comment
                     $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
