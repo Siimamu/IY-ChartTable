@@ -60,7 +60,7 @@
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='4'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='5'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -84,8 +84,20 @@
                     // Artist
                     $("<td width='25%'>" + info[i].artist + "</td>").appendTo(str);
 
-                    // Chart
-                    $("<td width='5%'>" + info[i].chart + "</td>").appendTo(str);
+                     // Chart
+                    if (info[i].url_diff != "" && info[i].url_diff != null) {
+                        if (info[i].name_diff != "" && info[i].name_diff != null) {
+                            $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
+                        } else {
+                            $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
+                        }
+                    } else {
+                        if (info[i].name_diff != "" && info[i].name_diff != null) {
+                            $("<td width='15%'>" + info[i].name_diff + "</td>").appendTo(str);
+                        } else {
+                            $("<td width='15%'></td>").appendTo(str);
+                        }
+                    }
                     
                     // Comment
                     $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
