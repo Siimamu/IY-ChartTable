@@ -1,5 +1,5 @@
 {
-"name" : "ここに難易度表の名前",
-"symbol" : "ここにシンボル",
-"data_url" : "ここにJSONのURL"
+"name" : "obj:IBARAGI_YOSHIMI ChartTable",
+"symbol" : "IY",
+"data_url" : "https://script.google.com/macros/s/AKfycbwh8_hmEG17KEOjmCxCdKBnDqJoyvpt09gwwu-Tuq-BBiW42OhF86spMdzEf5U_rwVA/exec"
 }
