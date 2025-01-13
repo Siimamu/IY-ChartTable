@@ -90,17 +90,20 @@
                      // Chart
                     if (info[i].url_diff != "" && info[i].url_diff != null) {
                         if (info[i].name_diff != "" && info[i].name_diff != null) {
-                            $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
+                            $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
                         } else {
-                            $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
+                            $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
                         }
                     } else {
                         if (info[i].name_diff != "" && info[i].name_diff != null) {
-                            $("<td width='15%'>" + info[i].name_diff + "</td>").appendTo(str);
+                            $("<td width='5%'>" + info[i].name_diff + "</td>").appendTo(str);
                         } else {
                             $("<td width='15%'></td>").appendTo(str);
                         }
                     }
+                    
+                    // Recommend
+                    $("<td width='10%'>" + info[i].recommend + "</td>").appendTo(str);
                     
                     // Comment
                     $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
