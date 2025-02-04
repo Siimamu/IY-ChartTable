@@ -1,4 +1,8 @@
-{"name" : "IBARAGI_YOSHIMI ChartTable","symbol" : "IY","data_url" : "https://script.google.com/macros/s/AKfycbwh8_hmEG17KEOjmCxCdKBnDqJoyvpt09gwwu-Tuq-BBiW42OhF86spMdzEf5U_rwVA/exec","level_order" : [],
+{
+"name" : "IBARAGI_YOSHIMI ChartTable",
+"symbol" : "IY",
+"data_url" : "https://script.google.com/macros/s/AKfycbwh8_hmEG17KEOjmCxCdKBnDqJoyvpt09gwwu-Tuq-BBiW42OhF86spMdzEf5U_rwVA/exec"
+}
 "course":[
 {"name":"IY_ChartDAN Tier4(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["5349409d61f8152d2181db284350f16e","76f4c15d879032764c01ee3b53ed78f7","95469902364aac0159a7a6043797106e","4895a2ce76c7427194a82fdb25bf2e24"]}
 {"name":"IY_ChartDAN Tier5(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["ca940b97a58fe92d84ab25e038bb6016","48794bd7a0b2208fa289fea1184bcc45","e659cdd1f7f1def49618450699e59186","1f242dd0b156f08e5e461461a5a1ad8e"]}
