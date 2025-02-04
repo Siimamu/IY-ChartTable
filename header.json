@@ -1,5 +1,23 @@
-{
-"name" : "IBARAGI_YOSHIMI ChartTable",
-"symbol" : "IY",
-"data_url" : "https://script.google.com/macros/s/AKfycbwh8_hmEG17KEOjmCxCdKBnDqJoyvpt09gwwu-Tuq-BBiW42OhF86spMdzEf5U_rwVA/exec"
-}
+{"name" : "IBARAGI_YOSHIMI ChartTable","symbol" : "IY","data_url" : "https://script.google.com/macros/s/AKfycbwh8_hmEG17KEOjmCxCdKBnDqJoyvpt09gwwu-Tuq-BBiW42OhF86spMdzEf5U_rwVA/exec","level_order" : []
+"course":[
+{"name":"IY_ChartDAN Tier4(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["5349409d61f8152d2181db284350f16e","76f4c15d879032764c01ee3b53ed78f7","95469902364aac0159a7a6043797106e","4895a2ce76c7427194a82fdb25bf2e24"]}
+{"name":"IY_ChartDAN Tier5(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["ca940b97a58fe92d84ab25e038bb6016","48794bd7a0b2208fa289fea1184bcc45","e659cdd1f7f1def49618450699e59186","1f242dd0b156f08e5e461461a5a1ad8e"]}
+{"name":"IY_ChartDAN Tier6(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["33d7ff4c61c0849dcf2b83eecb01c6fe","3d45cbd1106042e7e9a0fa8ab24d42af","618c2abe7a7a8d52e5fdcdfab43a30ff","e0576954b7eb9af15bed8e01b19c15f7"]}
+{"name":"IY_ChartDAN Tier8(仮)","constraint":["grade_mirror","gauge_lr2",""],"md5": ["be10fcccd4cc09cbadcd4bde3ef9ba96","ac32238aeeea2c01bda2d3f797c71e58","57472d9db5bc4df7da1671af69bb2b8c","18c58a17968b1c9fe1986f89ee3a0112"]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]}
