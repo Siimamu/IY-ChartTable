@@ -27,7 +27,7 @@
     <div class="container">
 
         <div class="alert alert-success mb-3" role="alert">
-            <p>obj:IBARAGI_YOSHIMI+αの自作差分置き場</p>
+            <p>obj:IBARAGI_YOSHIMI+αの自作差分置き場 普通の地力譜面多め</p>
             <p>同梱譜面と比較してズレ抜けがある差分は全て意図的な物です</p>
             <p>何かあれば<a href="https://x.com/SiiM4Mu">@SiiM4Mu</a>まで</p>
             <hr>
@@ -58,13 +58,13 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Chart</th><th>Recommend</th><th>BPM</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Chart</th><th>Recommend</th><th>BPM</th><th>T/N</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='7'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='8'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -108,6 +108,9 @@
 
                     // BPM
                     $("<td width='5%'>" + info[i].bpm + "</td>").appendTo(str);
+
+                    // T/N
+                    $("<td width='5%'>" + info[i].tn + "</td>").appendTo(str);
                     
                     // Comment
                     $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
@@ -118,7 +121,7 @@
                 $("</tbody>").appendTo(obj);
 
                 if (obj_sep != null) {
-                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='7'>" + "<b>" + mark + x +
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='8'>" + "<b>" + mark + x +
                         " (" + count + "譜面)</b></td>");
                 }
             }
