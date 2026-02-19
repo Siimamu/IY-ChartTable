@@ -43,6 +43,25 @@ td {
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
 }
+        /* すべての行を基本の黒にする */
+tr {
+  background-color: #000000;
+}
+
+/* 偶数行 (even) だけを少し明るいグレーにする */
+tr:nth-child(even) {
+  background-color: #1a1a1a; /* 真っ黒より少しだけ明るい色 */
+}
+
+/* 奇数行 (odd) も指定したい場合はこちら（基本は黒でOK） */
+tr:nth-child(odd) {
+  background-color: #000000;
+}
+
+/* ついでにマウスを乗せた行をさらに明るくすると、どこを見てるか一発でわかります */
+tr:hover {
+  background-color: #333333 !important;
+}
 </style>
     <header class="mb-3">
         <nav class="navbar navbar-dark bg-dark">
