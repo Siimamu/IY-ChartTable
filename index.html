@@ -59,21 +59,19 @@ td {
 
 /* リンクがある場合、リンクの色もホバー時に合わせる */
 #table_int tbody tr:hover a {
-    color: #00ffff !important;
-    text-shadow: 0 0 5px #00ffff;
+    color: #00ff00 !important;
+    text-shadow: 0 0 5px #00ff00;
 }
-        /* 1. フェードインのアニメーション（動き方）を定義 */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px); /* 少し下から上に浮き上がる */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+#fade-wrapper {
+    opacity: 0; /* 最初は隠しておく */
+    animation: fadeIn 1.2s ease-out 0.5s forwards; 
+    /* 0.5s は待ち時間。読み込みが遅いなら 1.0s くらいに伸ばすと確実です */
+}
 /* 2. テーブル全体にアニメーションを適用 */
 #table_int {
     animation: fadeIn 0.8s ease-out; /* 0.8秒かけてふわっと出す */
@@ -101,7 +99,7 @@ td {
 
 
         <!--ここから難易度表本体-->
-        <div>
+        <div id="fade-wrapper">
             <table class="table table-dark table-striped table-hover table-sm" id="table_int">
             </table>
         </div>
