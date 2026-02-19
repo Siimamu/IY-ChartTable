@@ -161,5 +161,23 @@ td {
             }
         </script>
     </div>
+    <script>
+  $(window).on('load', function() {
+    // スプレッドシートからの読み込みを待つために監視
+    var checkExist = setInterval(function() {
+      // テーブルのデータ行（tr）が1つ以上生成されたか確認
+      var rowCount = $('#table_int tr').length;
+
+      if (rowCount > 1) { 
+        // 実際のデータ数 = 全行数 - ヘッダー(1行)
+        var musicCount = rowCount - 1;
+        $('#music-count').text(musicCount);
+        
+        // カウントが終わったら監視を停止
+        clearInterval(checkExist);
+      }
+    }, 500); // 0.5秒ごとにチェック
+  });
+</script>
 
 </html>
