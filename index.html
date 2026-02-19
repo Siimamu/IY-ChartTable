@@ -41,6 +41,27 @@ td {
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
 }
+        /* Bootstrapのデフォルトホバー色を上書き */
+#table_int tbody tr:hover td {
+    background-color: #1a1a1a !important; /* 背景も少し明るく */
+    color: #00ffff !important;           /* 文字色をネオンブルーに */
+    
+    /* 上下の境界線に光の筋を入れる */
+    border-top: 1px solid #00ffff !important;
+    border-bottom: 1px solid #00ffff !important;
+    
+    /* 外側にボワーっと光る影をつける（これがネオンの正体） */
+    box-shadow: inset 0 0 10px #00ffff, 0 0 10px #00ffff;
+    
+    /* 滑らかに光らせるための時間設定 */
+    transition: all 0.2s ease;
+}
+
+/* リンクがある場合、リンクの色もホバー時に合わせる */
+#table_int tbody tr:hover a {
+    color: #00ffff !important;
+    text-shadow: 0 0 5px #00ffff;
+}
 </style>
     <header class="mb-3">
         <nav class="navbar navbar-dark bg-dark">
