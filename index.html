@@ -161,23 +161,24 @@ td {
             }
         </script>
     </div>
-    <script>
+```javascript
+<script>
   $(window).on('load', function() {
-    // スプレッドシートからの読み込みを待つために監視
+    // 0.5秒ごとに、テーブルの中にデータが入ったかチェックする
     var checkExist = setInterval(function() {
-      // テーブルのデータ行（tr）が1つ以上生成されたか確認
+      // 難易度表（#table_int）の中にある「行（tr）」の数を数える
       var rowCount = $('#table_int tr').length;
 
+      // 行数が1より多い（＝ヘッダー以外のデータが入った）場合
       if (rowCount > 1) { 
-        // 実際のデータ数 = 全行数 - ヘッダー(1行)
-        var musicCount = rowCount - 1;
+        var musicCount = rowCount - 1; // 全行数から見出しの1行を引く
+        
+        // id="music-count" の場所に数字を書き込む
         $('#music-count').text(musicCount);
         
-        // カウントが終わったら監視を停止
+        // カウントが終わったので、チェック（監視）を止める
         clearInterval(checkExist);
       }
-    }, 500); // 0.5秒ごとにチェック
+    }, 500); 
   });
 </script>
-
-</html>
