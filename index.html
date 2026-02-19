@@ -55,6 +55,15 @@ td {
     background-color: #000000 !important; /* 背景を真っ黒に */
     color: #ffffff !important;
 }
+        /* ヘッダー全体の境界線をリセット */
+#table_int thead th {
+    border-bottom: none !important;
+}
+
+/* Bootstrap 5でよく発生する「2pxの太い白い線」を上書き */
+#table_int thead {
+    border-bottom: 1px solid #444 !important; /* 暗い色に変える、または 0px にする */
+}
 </style>
     <header class="mb-3">
         <nav class="navbar navbar-dark bg-dark">
