@@ -33,9 +33,6 @@ td {
   padding: 10px;
   border: 1px solid #222222; /* セル同士の境目 */
   text-align: center;
-    /* tbodyの中にある偶数行だけを対象にする */
-tbody tr:nth-child(even) {
-  background-color: #2C3034 !important;
 }
         th {
   background-color: #000000; 
@@ -45,6 +42,10 @@ tbody tr:nth-child(even) {
             /* ★ここを追加★ */
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
+}
+        /* ゼブラ設定 */
+tbody tr:nth-child(even) {
+  background-color: #2C3034;
 }
 </style>
     <header class="mb-3">
