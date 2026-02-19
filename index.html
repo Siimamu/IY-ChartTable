@@ -14,20 +14,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
-    <script>
-  // GASでデータを取ってきた後に実行される関数の中、
-  // もしくは google.script.run.withSuccessHandler(...) の中に入れます
-  function displayTable(data) {
-    // ...テーブルを作る処理...
-
-    // ここで件数を数える！
-    const count = data.length; 
-    $('#music-count').text(count);
-    
-    // 前に話したフェードインを動かすならここ
-    $('#table_int').animate({ opacity: 1 }, 1000);
-  }
-</script>
 </head>
 
 <body>
@@ -88,7 +74,7 @@ td {
 
         <div class="alert alert-success mb-3" role="alert">
             <p>obj:IBARAGI_YOSHIMI(別名義含む)の自作差分置き場 普通の地力譜面多め</p>
-            <p>現在 <strong><span id="music-count">0</span></strong> 譜面あります</p>
+            <p>現在 <strong id="music-count">--</strong> 譜面あります</p>
             <p>何かあれば<a href="https://x.com/SiiM4Mu">@SiiM4Mu</a>まで</p>
             <hr>
             <p class="mb-0">難易度表記はstella基準です / IY0=st0</p>
@@ -173,6 +159,22 @@ td {
 
                 }
             }
+        <script>
+$(window).load(function() {
+    // スクリプトがテーブルを描き終えるまで少し待つ（重要）
+    setTimeout(function() {
+        // 1. カウント処理
+        // header行を除いた tr の数を数える
+        var count = $('#table_int tr').length - 1; 
+        if (count < 0) count = 0;
+        $('#music-count').text(count);
+
+        // 2. フェードイン処理
+        // CSSで初期状態を opacity: 0 にしている場合、ここで表示させる
+        $('#table_int').animate({ opacity: 1 }, 1000);
+        
+    }, 1000); // 1000ms（1秒）待ってから実行。これでも「0」になるなら2000に増やしてください。
+});
         </script>
     </div>
 
