@@ -21,6 +21,12 @@
   body {
     background-color: #121212; /* 背景を黒に */
   }
+        td {
+  background-color: #000000; /* セルの中身を黒に */
+  padding: 10px;
+  border: 1px solid #222222; /* セル同士の境目 */
+  text-align: center;
+}
 </style>
     <header class="mb-3">
         <nav class="navbar navbar-dark bg-dark">
@@ -46,19 +52,6 @@
         <!--ここから難易度表本体-->
         <div>
             <table class="table table-light table-striped table-hover table-sm" id="table_int">
-                <style>
-  table {
-    background-color: #000000;
-    color: #ffffff;
-    border-collapse: collapse; /* 枠線の隙間をなくすとBMS表っぽくなります */
-  }
-
-  /* 枠線も見えなくなるので、グレーなどで線を引くのがおすすめ */
-  th, td {
-    border: 1px solid #444444;
-    padding: 8px;
-  }
-</style>
             </table>
         </div>
         <script language="javascript" type="text/javascript">
