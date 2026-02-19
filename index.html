@@ -36,21 +36,19 @@ td {
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
 }
-/* ホバーした行の全セルを光らせる */
+/* Bootstrapのデフォルトホバー色を上書き */
 #table_int tbody tr:hover td {
-    background-color: #1a1a1a !important;
-    color: #00ff00 !important;
+    background-color: #1a1a1a !important; /* 背景も少し明るく */
+    color: #00ff00 !important;           /* 文字色をネオンブルーに */
     
-    /* 上下左右すべての枠線を光らせる */
-    border: 1px solid #00ff00 !important;
+    /* 上下の境界線に光の筋を入れる */
+    border-top: 1px solid #00ff00 !important;
+    border-bottom: 1px solid #00ff00 !important;
     
-    /* 外側への光(2つめ)と、内側への光(1つめ)を重ねてネオン感を出す */
-    text-shadow: inset 0 0 10px #00ff00, 0 0 15px rgba(0, 255, 255, 0.5) !important;
+    /* 外側にボワーっと光る影をつける（これがネオンの正体） */
+    text-shadow: inset 0 0 10px #00ff00, 0 0 10px #00ff00;
     
-    /* Z軸を手前に持ってくるイメージ（隣の行の線に隠されないようにする） */
-    position: relative;
-    z-index: 10;
-    
+    /* 滑らかに光らせるための時間設定 */
     transition: all 0.2s ease;
 }
 /* リンクがある場合、リンクの色もホバー時に合わせる */
