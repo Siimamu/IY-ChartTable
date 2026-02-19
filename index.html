@@ -170,16 +170,13 @@ td {
 
       // 行数が1より多い（＝ヘッダー以外のデータが入った）場合
       if (rowCount > 1) { 
-        var musicCount = rowCount - 1; // 全行数から見出しの1行を引く
+     　 var musicCount = $('#table_int tr').has('td').length;
         
         // id="music-count" の場所に数字を書き込む
         $('#music-count').text(musicCount);
         
         // カウントが終わったので、チェック（監視）を止める
         clearInterval(checkExist);
-
-        // 空行や見出しを除き、曲名などが記述されている行だけをカウント
-var musicCount = $('#table_int tr').has('td').length;
       }
     }, 500); 
   });
