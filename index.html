@@ -28,7 +28,7 @@
     background-color: #121212; /* 背景を黒に */
   }
 td {
-  background-color: #000000 !important; /* 強制的に黒にする */
+  background-color: #363636 !important; /* 強制的に黒にする */
   color: #ffffff !important;           /* 文字も強制的に白にする */
   padding: 10px;
   border: 1px solid #222222; /* セル同士の境目 */
@@ -42,25 +42,6 @@ td {
             /* ★ここを追加★ */
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
-}
-        /* すべての行を基本の黒にする */
-tr {
-  background-color: #000000;
-}
-
-/* 偶数行 (even) だけを少し明るいグレーにする */
-tr:nth-child(even) {
-  background-color: #1a1a1a !important; /* 真っ黒より少しだけ明るい色 */
-}
-
-/* 奇数行 (odd) も指定したい場合はこちら（基本は黒でOK） */
-tr:nth-child(odd) {
-  background-color: #000000 !important;
-}
-
-/* ついでにマウスを乗せた行をさらに明るくすると、どこを見てるか一発でわかります */
-tr:hover {
-  background-color: #333333 !important;
 }
 </style>
     <header class="mb-3">
