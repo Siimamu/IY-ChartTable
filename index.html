@@ -159,22 +159,6 @@ td {
 
                 }
             }
-        <script>
-$(window).load(function() {
-    // スクリプトがテーブルを描き終えるまで少し待つ（重要）
-    setTimeout(function() {
-        // 1. カウント処理
-        // header行を除いた tr の数を数える
-        var count = $('#table_int tr').length - 1; 
-        if (count < 0) count = 0;
-        $('#music-count').text(count);
-
-        // 2. フェードイン処理
-        // CSSで初期状態を opacity: 0 にしている場合、ここで表示させる
-        $('#table_int').animate({ opacity: 1 }, 1000);
-        
-    }, 1000); // 1000ms（1秒）待ってから実行。これでも「0」になるなら2000に増やしてください。
-});
         </script>
     </div>
 
