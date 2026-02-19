@@ -43,9 +43,15 @@ td {
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
 }
-        /* ゼブラ設定 */
-tbody tr:nth-child(even) {
-  background-color: #2C3034;
+        
+/* 偶数行の色を強制的に変える */
+tr:nth-child(even) td {
+  background-color: #1a1a1a !important;
+}
+
+/* 奇数行（または全行）のベースを強制的に黒にする */
+tr:nth-child(odd) td, tr td {
+  background-color: #000000 !important;
 }
 </style>
     <header class="mb-3">
