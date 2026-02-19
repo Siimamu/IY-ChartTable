@@ -35,27 +35,22 @@ td {
     border: 1px solid #333 !important;
     border-collapse: collapse;
 }
-/* ホバーした時の設定 */
+/* ホバーした行の全セルを光らせる */
 #table_int tbody tr:hover td {
-    background-color: #1a1a1a !important; /* 背景を少しだけ明るく */
-    color: #00ff00 !important;           /* 文字色をライムグリーンに */
+    background-color: #1a1a1a !important;
+    color: #00ff00 !important;
     
-    /* 文字をネオン風に光らせる設定 */
-    /* 1つめの影はクッキリ、2つめの影はボワーっと広げるのがコツです */
-    text-shadow: 0 0 5px #00ff00, 0 0 12px rgba(0, 255, 0, 0.6) !important;
-    
-    /* 枠線も色を合わせておくと統一感が出ます */
+    /* 上下左右すべての枠線を光らせる */
     border: 1px solid #00ff00 !important;
     
-    /* 上下の線の重なり問題を解決 */
+    /* 外側への光(2つめ)と、内側への光(1つめ)を重ねてネオン感を出す */
+    text-shadow: inset 0 0 10px #00ff00, 0 0 15px rgba(0, 255, 255, 0.5) !important;
+    
+    /* Z軸を手前に持ってくるイメージ（隣の行の線に隠されないようにする） */
     position: relative;
     z-index: 10;
     
-    transition: all 0.1s ease; /* 反応を速くしてキレを出す */
-}
-/* ヘッダー部分の境界線も調整して「一番上だけ光る」のを防ぐ */
-#table_int thead th {
-    border-bottom: 1px solid #444 !important;
+    transition: all 0.2s ease;
 }
 /* リンクがある場合、リンクの色もホバー時に合わせる */
 #table_int tbody tr:hover a {
