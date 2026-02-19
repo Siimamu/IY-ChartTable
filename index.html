@@ -28,8 +28,6 @@
     background-color: #121212; /* 背景を黒に */
   }
 td {
-  background-color: #212529; /* 強制的に黒にする */
-  color: #ffffff !important;           /* 文字も強制的に白にする */
   padding: 10px;
   border: 1px solid #222222; /* セル同士の境目 */
   text-align: center;
@@ -42,16 +40,6 @@ td {
             /* ★ここを追加★ */
   text-align: center;      /* 左右の中央揃え */
   vertical-align: middle;  /* 上下の中央揃え（セルに高さがある場合） */
-}
-        
-/* 偶数行の色を強制的に変える */
-tr:nth-child(even) td {
-  background-color: #1a1a1a !important;
-}
-
-/* 奇数行（または全行）のベースを強制的に黒にする */
-tr:nth-child(odd) td, tr td {
-  background-color: #212529 !important;
 }
 </style>
     <header class="mb-3">
@@ -77,7 +65,7 @@ tr:nth-child(odd) td, tr td {
 
         <!--ここから難易度表本体-->
         <div>
-            <table class="table table-light table-striped table-hover table-sm" id="table_int">
+            <table class="table table-dark table-striped table-hover table-sm" id="table_int">
             </table>
         </div>
         <script language="javascript" type="text/javascript">
