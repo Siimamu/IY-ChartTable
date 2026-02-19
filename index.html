@@ -50,12 +50,12 @@ tr {
 
 /* 偶数行 (even) だけを少し明るいグレーにする */
 tr:nth-child(even) {
-  background-color: #1a1a1a; /* 真っ黒より少しだけ明るい色 */
+  background-color: #1a1a1a !important; /* 真っ黒より少しだけ明るい色 */
 }
 
 /* 奇数行 (odd) も指定したい場合はこちら（基本は黒でOK） */
 tr:nth-child(odd) {
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 
 /* ついでにマウスを乗せた行をさらに明るくすると、どこを見てるか一発でわかります */
