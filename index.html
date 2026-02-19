@@ -98,7 +98,7 @@
                     var str = $("<tr></tr>");
 
                     // Level
-                    $("<td width='5%'>" + mark + x + "</td>").appendTo(str);
+                    $("<td width='3%'>" + mark + x + "</td>").appendTo(str);
 
                     // Title
                     $("<td width='25%'>" +
@@ -112,26 +112,26 @@
                      // Chart
                     if (info[i].url_diff != "" && info[i].url_diff != null) {
                         if (info[i].name_diff != "" && info[i].name_diff != null) {
-                            $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
+                            $("<td width='3%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
                         } else {
-                            $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
+                            $("<td width='3%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
                         }
                     } else {
                         if (info[i].name_diff != "" && info[i].name_diff != null) {
-                            $("<td width='5%'>" + info[i].name_diff + "</td>").appendTo(str);
+                            $("<td width='3%'>" + info[i].name_diff + "</td>").appendTo(str);
                         } else {
-                            $("<td width='5%'></td>").appendTo(str);
+                            $("<td width='3%'></td>").appendTo(str);
                         }
                     }
 
                     // BPM
-                    $("<td width='5%'>" + info[i].bpm + "</td>").appendTo(str);
+                    $("<td width='3%'>" + info[i].bpm + "</td>").appendTo(str);
 
                     // T/N
-                    $("<td width='5%'>" + info[i].tn + "</td>").appendTo(str);
+                    $("<td width='3%'>" + info[i].tn + "</td>").appendTo(str);
                     
                     // Comment
-                    $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
+                    $("<td width='15%'>" + info[i].comment + "</td>").appendTo(str);
                     str.appendTo(obj);
                     count++;
 
