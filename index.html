@@ -132,6 +132,16 @@ td {
 
                     // Song
                     if (info[i].url != "" && info[i].url != null) {
+                        if (info[i].name != "" && info[i].name != null) {
+                            $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].name + "</a></td>").appendTo(str);
+                        } else {
+                            $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].url + "</a></td>").appendTo(str);
+                        }
+                    } else {
+                        if (info[i].name != "" && info[i].name != null) {
+                            $("<td width='3%'>" + info[i].name + "</td>").appendTo(str);
+                        } else {
+                            $("<td width='3%'></td>").appendTo(str);
 
                      // Chart
                     if (info[i].url_diff != "" && info[i].url_diff != null) {
@@ -150,9 +160,6 @@ td {
 
                     // BPM
                     $("<td width='3%'>" + info[i].bpm + "</td>").appendTo(str);
-
-                    // T/N
-                    $("<td width='3%'>" + info[i].tn + "</td>").appendTo(str);
                     
                     // Comment
                     $("<td width='15%'>" + info[i].comment + "</td>").appendTo(str);
