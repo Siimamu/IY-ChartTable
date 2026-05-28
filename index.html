@@ -130,18 +130,24 @@ td {
                     // Artist
                     $("<td width='15%'>" + info[i].artist + "</td>").appendTo(str);
 
-                    // Song
-                    if (info[i].url != "" && info[i].url != null) {
-                        if (info[i].name != "" && info[i].name != null) {
-                            $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].name + "</a></td>").appendTo(str);
-                        } else {
-                            $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].url + "</a></td>").appendTo(str);
-                        }
-                    } else {
-                        if (info[i].name != "" && info[i].name != null) {
-                            $("<td width='3%'>" + info[i].name + "</td>").appendTo(str);
-                        } else {
-                            $("<td width='3%'></td>").appendTo(str);
+// Title / Main Link
+if (info[i].url != "" && info[i].url != null) {
+    if (info[i].name != "" && info[i].name != null) {
+        // パターン①：本体URLがあり、曲名（タイトル）もある場合（曲名にリンクを貼る）
+        $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].name + "</a></td>").appendTo(str);
+    } else {
+        // パターン②：本体URLはあるが、曲名が空の場合（URLをそのまま表示）
+        $("<td width='3%'><a href='" + info[i].url + "'>" + info[i].url + "</a></td>").appendTo(str);
+    }
+} else {
+    if (info[i].name != "" && info[i].name != null) {
+        // パターン③：本体URLはないが、曲名はある場合（テキストのみ表示）
+        $("<td width='3%'>" + info[i].name + "</td>").appendTo(str);
+    } else {
+        // パターン④：両方ない場合（空のセル）
+        $("<td width='3%'></td>").appendTo(str);
+    }
+}
 
                      // Chart
                     if (info[i].url_diff != "" && info[i].url_diff != null) {
