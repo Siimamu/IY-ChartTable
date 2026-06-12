@@ -77,7 +77,7 @@ td {
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Song</th><th>Chart</th><th>BPM</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Song</th><th>Chart</th><th>Video</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
@@ -138,8 +138,20 @@ if (info[i].url != "" && info[i].url != null) {
                         }
                     }
 
-                    // BPM
-                    $("<td width='3%'>" + info[i].bpm + "</td>").appendTo(str);
+                    // Video
+   　　　　　　　　　if (info[i].url_yt != "" && info[i].url_yt != null) {
+                        if (info[i].name_yt != "" && info[i].name_yt != null) {
+                            $("<td width='3%'><a href='" + info[i].url_yt + "'>" + info[i].name_yt + "</a></td>").appendTo(str);
+                        } else {
+                            $("<td width='3%'><a href='" + info[i].url_yt + "'>" + info[i].url_yt + "</a></td>").appendTo(str);
+                        }
+                    } else {
+                        if (info[i].name_yt != "" && info[i].name_yt != null) {
+                            $("<td width='3%'>" + info[i].name_yt + "</td>").appendTo(str);
+                        } else {
+                            $("<td width='3%'></td>").appendTo(str);
+                        }
+                    }
                     
                     // Comment
                     $("<td width='15%'>" + info[i].comment + "</td>").appendTo(str);
