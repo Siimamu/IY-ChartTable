@@ -141,9 +141,9 @@ if (info[i].url != "" && info[i].url != null) {
                     // Video
    　　　　　　　　　if (info[i].url_yt != "" && info[i].url_yt != null) {
                         if (info[i].name_yt != "" && info[i].name_yt != null) {
-                            $("<td width='3%'><a href='" + info[i].url_yt + "'>" + info[i].name_yt + "</a></td>").appendTo(str);
+                            $("<td width='3%'><a href='" + info[i].url_yt + "' target='_blank' rel='noopener noreferrer'>" + info[i].name_yt + "</a></td>").appendTo(str);
                         } else {
-                            $("<td width='3%'><a href='" + info[i].url_yt + "'>" + info[i].url_yt + "</a></td>").appendTo(str);
+                            $("<td width='3%'><a href='" + info[i].url_yt + "' target='_blank' rel='noopener noreferrer'>" + info[i].url_yt + "</a></td>").appendTo(str);
                         }
                     } else {
                         if (info[i].name_yt != "" && info[i].name_yt != null) {
